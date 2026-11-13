@@ -1,0 +1,8 @@
+# Bundle patch layer for dsh-usage-stats.
+#
+# The Host half (index.js) collects llm/stream token usage and serves
+# aggregates at /api/usage-stats; the browser half (client.js) renders
+# the magpie-style usage dashboard in the sidebar panel.
+- insert:
+    - id: usage-stats
+      name: dsh-usage-stats

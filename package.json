@@ -1,0 +1,43 @@
+{
+  "name": "dsh-usage-stats",
+  "version": "0.7.0",
+  "description": "DeepSeek Harness (dsh) plugin: Stripe-style usage insights dashboard with switchable trend chart (bar/line), metric (tokens/requests/cost), and a full-year activity heatmap.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./index.js",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.mjs"
+  },
+  "exports": {
+    "./client": "./client.js",
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "usage",
+    "stats",
+    "tokens",
+    "magpie"
+  ],
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "react": "^19.0.0"
+  }
+}
